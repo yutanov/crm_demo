@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Структура подразделений</title>
+        <link href="{% static 'crm/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'crm/css/style.css' %}" rel="stylesheet">
+        <script src="{% static 'crm/js/bootstrap.bundle.min.js' %}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-5">Структура подразделений</h1>
+            <div id="department-tree" class="mt-4"></div>
+        </div>
+        <script src="{% static 'crm/js/jquery.min.js' %}"></script>
+        <script src="{% static 'crm/js/dep_tree.js' %}"></script>
+    </body>
+</html>

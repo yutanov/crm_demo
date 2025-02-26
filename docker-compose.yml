@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+
+  crm:
+    build: .
+    image: crm_demo
+    container_name: crm
+    volumes:
+      - "./crm/:/crm/"
+    restart: on-failure
+    command: >
+      bash -c "
+        python manage.py migrate &&
+        python manage.py init_db &&
+        python manage.py runserver 0.0.0.0:9000
+      "
+    ports:
+      - 9000:9000
+    deploy:
+      resources:
+        limits:
+          cpus: '0.8'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+
+volumes:
+  crm:

@@ -1,0 +1,13 @@
+.department-node {
+  cursor: pointer;
+  margin: 5px 0;
+}
+.employee-list {
+  display: none;
+  padding-left: 20px;
+}
+.loading-spinner {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+}
